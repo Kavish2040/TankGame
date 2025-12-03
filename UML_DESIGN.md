@@ -28,13 +28,16 @@ classDiagram
     class Tank {
         -int health
         -Direction direction
-        -MovementStrategy strategy
+        -MovementStrategy movementStrategy
         -double speed
         -boolean isPlayer
-        +move(Direction, List)
+        -double fireCooldown
+        +move(Direction, List, double, double)
         +fire() Missile
         +takeDamage(int)
         +heal()
+        +getHealth() int
+        +isPlayer() boolean
     }
     
     class Missile {
@@ -43,6 +46,8 @@ classDiagram
         -int DAMAGE
         +update()
         +getDamage() int
+        +getOwner() Tank
+        +isOutOfBounds(double, double) boolean
     }
     
     class Wall {
@@ -82,19 +87,25 @@ classDiagram
     }
     
     class PlayerMovementStrategy {
-        +getNextMove() Direction
+        +getNextMove(Tank, List, Tank) Direction
     }
     
     class RandomMovementStrategy {
         -Random random
         -Direction currentDirection
-        +getNextMove() Direction
+        -int moveCounter
+        -double lastX
+        -double lastY
+        +getNextMove(Tank, List, Tank) Direction
     }
     
     class AggressiveMovementStrategy {
         -Random random
         -Direction currentDirection
-        +getNextMove() Direction
+        -int moveCounter
+        -double lastX
+        -double lastY
+        +getNextMove(Tank, List, Tank) Direction
     }
     
     %% Factory Pattern (Singleton)
@@ -118,12 +129,17 @@ classDiagram
         -List~Missile~ missiles
         -List~Wall~ walls
         -List~MedPack~ medPacks
+        -List~Explosion~ explosions
         -int score
         -int lives
+        -GameState gameState
         +getInstance() GameEngine
+        +initializeGame()
         +update()
         +keyPressed(KeyCode)
+        +keyReleased(KeyCode)
         +checkCollisions()
+        +restart()
     }
     
     %% Observer Pattern
@@ -145,6 +161,7 @@ classDiagram
     class GameEventManager {
         -List~GameEventListener~ listeners
         +addListener(GameEventListener)
+        +removeListener(GameEventListener)
         +notifyListeners(GameEvent, Object)
     }
     
