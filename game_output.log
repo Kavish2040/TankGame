@@ -1,0 +1,47 @@
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::staticFieldBase has been called by com.google.inject.internal.aop.HiddenClassDefiner (file:/opt/homebrew/Cellar/maven/3.9.11/libexec/lib/guice-5.1.0-classes.jar)
+WARNING: Please consider reporting this to the maintainers of class com.google.inject.internal.aop.HiddenClassDefiner
+WARNING: sun.misc.Unsafe::staticFieldBase will be removed in a future release
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ---------------------< com.tankgame:tank-war-game >---------------------
+[INFO] Building Tank War Game 1.0.0
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[WARNING] 6 problems were encountered while building the effective model for org.openjfx:javafx-controls:jar:21.0.2 during dependency collection step for project (use -X to see details)
+[INFO] 
+[INFO] --- clean:3.2.0:clean (default-clean) @ tank-war-game ---
+[INFO] Deleting /Users/kavishsoningra/Tank Game /target
+[INFO] 
+[INFO] >>> javafx:0.0.8:run (default-cli) > process-classes @ tank-war-game >>>
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ tank-war-game ---
+[INFO] skip non existing resourceDirectory /Users/kavishsoningra/Tank Game /src/main/resources
+[INFO] 
+[INFO] --- compiler:3.10.1:compile (default-compile) @ tank-war-game ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 20 source files to /Users/kavishsoningra/Tank Game /target/classes
+[INFO] 
+[INFO] <<< javafx:0.0.8:run (default-cli) < process-classes @ tank-war-game <<<
+[INFO] 
+[INFO] 
+[INFO] --- javafx:0.0.8:run (default-cli) @ tank-war-game ---
+WARNING: A restricted method in java.lang.System has been called
+WARNING: java.lang.System::load has been called by com.sun.glass.utils.NativeLibLoader in module javafx.graphics (file:/Users/kavishsoningra/.m2/repository/org/openjfx/javafx-graphics/21.0.2/javafx-graphics-21.0.2-mac-aarch64.jar)
+WARNING: Use --enable-native-access=javafx.graphics to avoid a warning for callers in this module
+WARNING: Restricted methods will be blocked in a future release unless native access is enabled
+
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::allocateMemory has been called by com.sun.marlin.OffHeapArray (file:/Users/kavishsoningra/.m2/repository/org/openjfx/javafx-graphics/21.0.2/javafx-graphics-21.0.2-mac-aarch64.jar)
+WARNING: Please consider reporting this to the maintainers of class com.sun.marlin.OffHeapArray
+WARNING: sun.misc.Unsafe::allocateMemory will be removed in a future release
+Player destroyed!
+Player destroyed!
+Player destroyed!
+Game lost!
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  11:33 min
+[INFO] Finished at: 2025-12-03T11:23:47-06:00
+[INFO] ------------------------------------------------------------------------
