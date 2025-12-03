@@ -16,7 +16,7 @@ public class GameEngine {
     private static final double MAP_HEIGHT = 800;
     private static final int INITIAL_ENEMY_COUNT = 6;
     private static final int INITIAL_LIVES = 3;
-    private static final double ENEMY_FIRE_RATE = 0.01; // Reduced from 0.02 to make it easier
+    private static final double ENEMY_FIRE_RATE = 0.01; 
     
     private Tank playerTank;
     private List<Tank> enemyTanks;
@@ -282,7 +282,7 @@ public class GameEngine {
                 enemy.move(aiDirection, allObjects, MAP_WIDTH, MAP_HEIGHT);
             }
             
-            // Random firing (reduced rate to make game easier)
+          
             if (random.nextDouble() < ENEMY_FIRE_RATE) {
                 Missile missile = enemy.fire();
                 if (missile != null) {
